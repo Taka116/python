@@ -1,0 +1,36 @@
+res_name,location, food_type,avg_price
+Katougyuunikutenshibutsuu,shibuya,tonkatsu,2000
+Uonoma,akihabara,seafood,4500
+Shibuya Bar Five,shibuya, izakaya, 2500
+Okinawaryourigo-pachi,shibuya,izakaya, 3500
+BEE HOUSE,shibuya, italian, 3500
+Hamayakisakabatorohachi,shibuya, seafood, 3500
+KollaBo,shibuya, yakiniku, 4000
+Gyuutankeisuke,shibuya, yakiniku, 3000
+Satsumaushinokura,shibuya, yakiniku, 6000
+RISOTTO CURRY STANDARD ,shibuya, italian, 4000
+DELICIOUS-AMERICAN BISTRO,shibuya,burger,3000
+kyoumachikoshitsuizakayasakanagoten,akihabara,izakaya,2000
+CHELSEA MARKET,akihabara,burger,2000
+Bisutoroya,akihabara,izakaya,4000
+Haruyo,akihabara,seafood,5000
+Totoguranemuro,akihabara,seafood,4000
+Uonoma,akihabara,izakaya,3500
+Hanedashijouchokusouwashokuizakayakuroshio,akihabara,seafood,3500
+Suzuya,akihabara,tonkatsu,2000
+Nikubarunikusondaitouryou,akihabara,yakiniku,4500
+Sushidokorokinnodashi,akihabara,sushi,3000
+Nihonshugenkasakagura,akihabara,sushi,4000
+Bakauma,shinjyuku,izakaya,3000
+Unoya,shinjyuku,izakaya,3000
+Hokkaidoukaisenhanarejouchonishigohigashisan,shinjyuku,seafood,2000
+Sushikappouhamaseihonten,shinjyuku,sushi,3000
+Ariran,shinjyuku,yakiniku,3000
+Juntan,shinjyuku,yakiniku,4000
+Jizaketosobakyoufuuodensangendou,shinjyuku,seafood,3500
+Chizutowagyuubisutorokikorinoouchi,shinjyuku,italian,5000
+Yakinikutoraji,shinjyuku,yakiniku,6000
+Buono,shinjyuku,italian,2000
+Sakabaru, shinjyuku,seafood,3000
+Ouroji,shinjyuku,tonkatsu,1000
+Kafisu,shinjyuku,burger,2000

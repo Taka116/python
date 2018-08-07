@@ -3,6 +3,7 @@ from selenium import webdriver
 from selenium.webdriver.support.ui import Select
 from bs4 import BeautifulSoup
 import csv
+import re
 
 def acquire_classes():
     result = driver.page_source
@@ -15,12 +16,31 @@ def acquire_classes():
         info = texts.split('\n')[1:-1]
 
         if not len(info[0]) == 0:
-            class_code, name, prof, class_place, time = info[1], info[2], info[3],info[6],  info[7]
-            with open('class.csv', 'a') as f:
-                writer = csv.writer(f, lineterminator='\n')
-                writer.writerow([class_code, name, prof, class_place, time])
             
-            infoOfClasses.append([class_code, name, prof, time, class_place])
+            time = info[6]
+            days_and_periods = []
+
+            search = re.search('[月火水木金土]', time)
+            if search is None:
+                days_and_periods.append(['曜日', '時限'])
+            else:
+                splitted_time = time.split("時限")
+                del splitted_time[-1]
+                if len(splitted_time) > 1:
+                    formatted_time = [e[3:]for e in splitted_time]
+                    for f in formatted_time:
+                        # import pdb; pdb.set_trace()
+                        days_and_periods.append( [f[0], int(f[1]) ])
+                else:
+                    days_and_periods.append( [splitted_time[0][0], int(splitted_time[0][1]) ])
+
+            for day_and_period in days_and_periods:
+                class_code, name, prof, class_place, day, period = info[1], info[2], info[3],info[7], day_and_period[0], day_and_period[1]
+                with open('class.csv', 'a') as f:
+                    writer = csv.writer(f, lineterminator='\n')
+                    writer.writerow([class_code, name, prof, class_place, day, period])
+                
+                infoOfClasses.append([class_code, name, prof, time, class_place])
 
 driver = webdriver.PhantomJS()
 
